@@ -46,6 +46,8 @@
     <Compile Include="AllowedPersons.cs" />
     <Compile Include="BreedType.cs" />
     <Compile Include="Dumbledore.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="GroupType.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />

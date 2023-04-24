@@ -10,7 +10,7 @@ namespace Hogwarts
     {
         public int PassedUnits { get; set; }
         public int Term { get; set; }
-        public int HostelNumber { get; set; }
+        public int DormitoryNumber { get; set; }
 
      }
 }

@@ -47,6 +47,7 @@
     <Compile Include="Botanical.cs" />
     <Compile Include="BreedType.cs" />
     <Compile Include="Chemistry.cs" />
+    <Compile Include="Dormitory.cs" />
     <Compile Include="Dumbledore.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="GroupType.cs" />

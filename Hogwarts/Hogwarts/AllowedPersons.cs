@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hogwarts
 {
-    internal class AllowedPersons:Person
+    public class AllowedPersons:Person
     {
         public string Curriculum { get; set; }
         public Pet Pet { get; set; }

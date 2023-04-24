@@ -51,6 +51,7 @@
     <Compile Include="Group.cs" />
     <Compile Include="GroupType.cs" />
     <Compile Include="Lessons.cs" />
+    <Compile Include="Occultism.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />

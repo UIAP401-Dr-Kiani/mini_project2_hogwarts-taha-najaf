@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hogwarts
 {
-    public class Student
+    public class Student:AllowedPersons
     {
         public int PassedUnits { get; set; }
         public int Term { get; set; }

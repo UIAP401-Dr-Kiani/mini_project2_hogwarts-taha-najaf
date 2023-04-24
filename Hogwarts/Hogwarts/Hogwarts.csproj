@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllowedPersons.cs" />
+    <Compile Include="Botanical.cs" />
     <Compile Include="BreedType.cs" />
     <Compile Include="Chemistry.cs" />
     <Compile Include="Dumbledore.cs" />

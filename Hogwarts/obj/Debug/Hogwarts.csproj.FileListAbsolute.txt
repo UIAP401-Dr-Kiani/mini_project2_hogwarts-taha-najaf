@@ -1,0 +1,8 @@
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\bin\Debug\Hogwarts.exe.config
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\bin\Debug\Hogwarts.exe
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\bin\Debug\Hogwarts.pdb
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\obj\Debug\Hogwarts.csproj.AssemblyReference.cache
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\obj\Debug\Hogwarts.csproj.SuggestedBindingRedirects.cache
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\obj\Debug\Hogwarts.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\obj\Debug\Hogwarts.exe
+C:\Users\pc\source\repos\mini_project2_hogwarts-taha-najaf\Hogwarts\Hogwarts\obj\Debug\Hogwarts.pdb

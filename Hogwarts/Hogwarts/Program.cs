@@ -12,7 +12,7 @@ namespace Hogwarts
         static void Main(string[] args)
         {
             List <AllowedPersons> persons = new List <AllowedPersons> ();
-            using (StreamReader file = new StreamReader("file.tsv"))
+            using (StreamReader file = new StreamReader("TXT_DATA.tsv"))
             {
                 string ln;
 
@@ -44,6 +44,7 @@ namespace Hogwarts
                 file.Close();
             }
             int Entrychoice=Menu.EnteryMenu();
+            Console.ReadKey();
         }
     }
 }

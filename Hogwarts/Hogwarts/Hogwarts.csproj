@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Hogwarts.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +55,7 @@
     <Compile Include="Group.cs" />
     <Compile Include="GroupType.cs" />
     <Compile Include="Lessons.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Occultism.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="Person.cs" />

@@ -28,13 +28,13 @@ namespace Hogwarts
                     allowedPersons.FatherName = human[4];
                     allowedPersons.Username = human[5];
                     allowedPersons.Password = human[6];
-                    if (human[7] == "HalfBlood")// for breed or race type
+                    if (human[7] == "HalfBlood")//--- for breed or race type
                         allowedPersons.breedType = BreedType.HalfBlood;
                     else if (human[7] == "PureBlood")
                         allowedPersons.breedType = BreedType.PureBlood;
                     else if (human[7] == "MuggleBlood")
                         allowedPersons.breedType = BreedType.MuggleBlood;
-                    if (human[8] == "teacher")//for role
+                    if (human[8] == "teacher")//---for role
                         allowedPersons.Role = Role.teacher;
                     else if (human[8] == "student")
                         allowedPersons.Role = Role.student;
@@ -43,6 +43,7 @@ namespace Hogwarts
                 }
                 file.Close();
             }
+            int Entrychoice=Menu.EnteryMenu();
         }
     }
 }

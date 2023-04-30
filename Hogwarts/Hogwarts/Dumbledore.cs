@@ -64,6 +64,9 @@ namespace Hogwarts
                 }
             }
         }
-
+        public static void Gardening (Plant plant)
+        {
+            plant.NumberOfPlants += 20;
+        }
     }
 }

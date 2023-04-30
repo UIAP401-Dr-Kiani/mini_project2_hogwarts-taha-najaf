@@ -40,5 +40,30 @@ namespace Hogwarts
             return choice;
             
         }
+        public static void SendLetter(List<AllowedPersons> persons)
+        {
+            int trainHour = 8;
+            int personsPerTrain = 50;
+
+            for (int i = 0; i < persons.Count; i++)
+            {
+                int trainNumber = i / personsPerTrain + 1;
+                trainHour += (i % personsPerTrain == 0 && i > 0) ? 1 : 0;
+
+                AllowedPersons person = persons[i];
+                if (person.Role != Role.teacher)
+                {
+                    string letter = $"Hello dear {person.FirstName} {person.LastName},\n" +
+                                    $"Welcome to Hogwarts!\n" +
+                                    $"Your train information:\n" +
+                                    $"Train Number: {trainNumber}\n" +
+                                    $"Train Departure Time: {trainHour}:00\n" +
+                                    $"Remember, if you miss the train, you'll have to wait an hour for the next one.";
+
+                    person.ReceivedLetter = letter;
+                }
+            }
+        }
+
     }
 }

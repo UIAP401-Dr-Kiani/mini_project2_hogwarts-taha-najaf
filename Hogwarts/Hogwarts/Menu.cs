@@ -11,7 +11,7 @@ namespace Hogwarts
         public static int EnteryMenu()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("     -----*****Welcome to the Hogwarts Management System****----     ");
+            Console.WriteLine("                             -----*****Welcome to the Hogwarts Management System****----     ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Please enter your role by number:\n 1=>Dumbledore\t2=>Teachers\t3=>Student\t4=>Exit");
             int choice = int.Parse(Console.ReadLine());
@@ -25,7 +25,7 @@ namespace Hogwarts
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Please enter your choice by number:     ");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("1=>Sending letters to students\t2=>Exit");
+            Console.WriteLine("1=>Sending letters to students\t2=>Gardening\t3=>Exit");
             int choice=int.Parse(Console.ReadLine());
             Console.ResetColor();
             return choice;

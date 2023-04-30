@@ -44,6 +44,27 @@ namespace Hogwarts
                 file.Close();
             }
             int Entrychoice=Menu.EnteryMenu();
+            while(Entrychoice!=4)
+            {
+                if (Entrychoice==1)
+                {
+                    List<AllowedPersons> allowedPersons = new List<AllowedPersons>();
+                    Plant plant = new Plant();
+                    int AuthenticationResult = Dumbledore.Authentication();
+                    if (AuthenticationResult == 0)
+                        continue;
+                    else
+                    {
+                        int DumbledoreChoice=Menu.DumbledoreMenu();
+                        if (DumbledoreChoice == 3)
+                            continue;
+                        else if (DumbledoreChoice == 1)
+                            Dumbledore.SendLetter(allowedPersons);
+                        else if (DumbledoreChoice == 2)
+                            Dumbledore.Gardening(plant);
+                    }
+                }
+            }
             Console.ReadKey();
         }
     }

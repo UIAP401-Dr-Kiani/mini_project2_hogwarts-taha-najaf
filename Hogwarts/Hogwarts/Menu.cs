@@ -10,10 +10,13 @@ namespace Hogwarts
     {
         public static int EnteryMenu()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("                             -----*****Welcome to the Hogwarts Management System****----     ");
+        //    Console.ForegroundColor = ConsoleColor.Green;
+        //    //Console.BackgroundColor = ConsoleColor.White;
+        //    Console.WriteLine("                             -----*****Welcome to the Hogwarts Management System****----     ");
+            //Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Please enter your role by number:\n 1=>Dumbledore\t2=>Teachers\t3=>Student\t4=>Exit");
+            Console.WriteLine("Please enter your role by number:\n" +
+                "1=>Dumbledore      2=>Teachers     3=>Student      4=>Exit");
             int choice = int.Parse(Console.ReadLine());
             Console.ResetColor();
             return choice;
@@ -21,7 +24,9 @@ namespace Hogwarts
         public static int DumbledoreMenu()
         {
             Console.ForegroundColor= ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("     ----****Welcome to the Dumbledore(Admin) menu****----       ");
+            Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Please enter your choice by number:     ");
             Console.ForegroundColor = ConsoleColor.Green;
@@ -33,7 +38,9 @@ namespace Hogwarts
         public static int TeacherMenu()
         {
             Console.ForegroundColor=ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("     ----****Welcome to the Teachers menu****----       ");
+            Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Please enter your choice by numbers:     ");
             Console.ForegroundColor = ConsoleColor.Green;
@@ -45,7 +52,9 @@ namespace Hogwarts
         public static int StudentMenu()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("     ----****Welcome to the Students menu****----       ");
+            Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Please enter your choice by numbers:     ");
             Console.ForegroundColor = ConsoleColor.Green;

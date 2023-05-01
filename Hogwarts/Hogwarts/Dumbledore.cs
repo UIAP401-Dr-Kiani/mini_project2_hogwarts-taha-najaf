@@ -11,10 +11,11 @@ namespace Hogwarts
     public class Dumbledore : AllowedPersons
     {
         Dormitory dormitorylist;
-        
-        public static int Authentication()
+        public string username { get; set; }
+        public string password { get; set; }
+        public static bool Authentication()
         {
-            int choice=0;
+            bool choice=false;
             Console.WriteLine("Please enter your username");
             string username=Console.ReadLine();
             Console.WriteLine("Please enter your password");
@@ -23,19 +24,22 @@ namespace Hogwarts
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Please enter valid information");
-                choice = 0;
+                Console.ResetColor();
+                choice = false;
             }
-            else if (username != "Admin" && password != "****" )
+            else if (username != "Admin" || password != "****" )
             {
                 Console.ForegroundColor= ConsoleColor.DarkRed;
                 Console.WriteLine("Your username or password is wrong");
-                choice = 0;
+                Console.ResetColor();
+                choice = false;
             }
             else if (username == "Admin" && password == "****")
             {
                 Console.ForegroundColor=ConsoleColor.Blue;
                 Console.WriteLine("Correct");
-                choice = 1;
+                Console.ResetColor();
+                choice = true;
             }
             return choice;
             
@@ -63,10 +67,16 @@ namespace Hogwarts
                     person.ReceivedLetter = letter;
                 }
             }
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Letters sent to the students.");
+            Console.ResetColor();
         }
         public static void Gardening (Plant plant)
         {
             plant.NumberOfPlants += 20;
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Plants gardened in the jungle.");
+            Console.ResetColor();
         }
     }
 }

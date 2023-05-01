@@ -43,28 +43,40 @@ namespace Hogwarts
                 }
                 file.Close();
             }
-            int Entrychoice=Menu.EnteryMenu();
-            while(Entrychoice!=4)
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("                             -----*****Welcome to the Hogwarts Management System****----     ");
+            Console.ResetColor();
+            while (true)
             {
-                if (Entrychoice==1)
+                int Entrychoice = Menu.EnteryMenu();
+                if (Entrychoice == 4)
+                    break;
+                if (Entrychoice == 1)//Dumbledore menu
                 {
+                    Dumbledore dumbledore = new Dumbledore();
                     List<AllowedPersons> allowedPersons = new List<AllowedPersons>();
                     Plant plant = new Plant();
-                    int AuthenticationResult = Dumbledore.Authentication();
-                    if (AuthenticationResult == 0)
-                        continue;
-                    else
+                    bool AuthenticationResult = Dumbledore.Authentication();
+                    if (AuthenticationResult==true)
                     {
-                        int DumbledoreChoice=Menu.DumbledoreMenu();
-                        if (DumbledoreChoice == 3)
+                        int DumbledoreChoice = Menu.DumbledoreMenu();
+                        if (DumbledoreChoice == 3)//exit
                             continue;
                         else if (DumbledoreChoice == 1)
+
                             Dumbledore.SendLetter(allowedPersons);
                         else if (DumbledoreChoice == 2)
                             Dumbledore.Gardening(plant);
                     }
+                    else
+                    {
+                        continue;
+                    }
                 }
+                
+
             }
+            Console.WriteLine("Thanks for using our system.");
             Console.ReadKey();
         }
     }

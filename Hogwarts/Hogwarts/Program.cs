@@ -11,7 +11,7 @@ namespace Hogwarts
     {
         static void Main(string[] args)
         {
-            List <AllowedPersons> persons = new List <AllowedPersons> ();
+            List <AllowedPersons> ListOfAllowedPersons = new List <AllowedPersons> ();
             using (StreamReader file = new StreamReader("TXT_DATA.tsv"))
             {
                 string ln;
@@ -39,7 +39,7 @@ namespace Hogwarts
                     else if (human[8] == "student")
                         allowedPersons.Role = Role.student;
 
-                    persons.Add(allowedPersons);
+                    ListOfAllowedPersons.Add(allowedPersons);
                 }
                 file.Close();
             }
@@ -74,7 +74,14 @@ namespace Hogwarts
                     }
                 }
                 
-
+                else if (Entrychoice == 3)//student 
+                {
+                    Console.WriteLine("Please enter your username");
+                    string username=Console.ReadLine();
+                    Console.WriteLine("Please enter your password");
+                    string password = Console.ReadLine();
+                    for 
+                }
             }
             Console.WriteLine("Thanks for using our system.");
             Console.ReadKey();

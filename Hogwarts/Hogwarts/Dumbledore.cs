@@ -13,6 +13,7 @@ namespace Hogwarts
         Dormitory dormitorylist;
         public string username { get; set; }
         public string password { get; set; }
+        public string ReceivedLetterOfStudent { get; set; }
         public static bool Authentication()
         {
             bool choice=false;

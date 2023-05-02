@@ -80,7 +80,22 @@ namespace Hogwarts
                     string username=Console.ReadLine();
                     Console.WriteLine("Please enter your password");
                     string password = Console.ReadLine();
-                    for 
+                    foreach (var person in ListOfAllowedPersons)
+                    {
+                        if (person.Role==Role.student && person.Username==username&&person.Password==password)
+                        {
+                            int studentChoice=Menu.StudentMenu();
+                            if (studentChoice == 1)//send letter to dumbledore 
+                            {
+
+                            }
+                        }
+                        else 
+                        {
+                            Console.WriteLine("Wrong username or password");
+                            continue; 
+                        }
+                    }
                 }
             }
             Console.WriteLine("Thanks for using our system.");

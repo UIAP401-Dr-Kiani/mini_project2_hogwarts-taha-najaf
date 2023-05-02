@@ -76,25 +76,36 @@ namespace Hogwarts
                 
                 else if (Entrychoice == 3)//student 
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine("Please enter your username");
                     string username=Console.ReadLine();
+                    Console.ForegroundColor= ConsoleColor.DarkGray;
                     Console.WriteLine("Please enter your password");
                     string password = Console.ReadLine();
+                    Console.ResetColor();
+                    bool found=false;
                     foreach (var person in ListOfAllowedPersons)
                     {
                         if (person.Role==Role.student && person.Username==username&&person.Password==password)
                         {
+                            found= true;
                             int studentChoice=Menu.StudentMenu();
                             if (studentChoice == 1)//send letter to dumbledore 
+                            {
+                                Student.SendLetterToDumbledore(Username:username,password:password);
+                            }
+                            else if (studentChoice == 2)
                             {
 
                             }
                         }
-                        else 
-                        {
-                            Console.WriteLine("Wrong username or password");
-                            continue; 
-                        }
+                    }
+                    if (!found)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Wrong username or password");
+                        Console.ResetColor();
+                        continue;
                     }
                 }
             }

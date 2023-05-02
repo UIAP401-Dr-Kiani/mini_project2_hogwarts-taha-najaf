@@ -12,9 +12,9 @@ namespace Hogwarts
         public int PassedUnits { get; set; }
         public int Term { get; set; }
         public int DormitoryNumber { get; set; }
-        public static void SendLetterToDumbledore(string Username,string password)
+        public static void SendLetterToDumbledore(string Firstname,string Lastname)
         {
-            string request = $"You have new message from student with this username{Username} and password {password}\n" +
+            string request = $"You have new message from student with this firstname {Firstname} and lastname {Lastname}\n" +
                 "Dear Dumbledore\n" +
                 "I am writing to request permission to return to the city. ";
             Dumbledore.ReceivedLetterOfStudent = request;

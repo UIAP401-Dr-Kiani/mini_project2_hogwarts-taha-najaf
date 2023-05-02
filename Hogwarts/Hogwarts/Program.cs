@@ -80,7 +80,7 @@ namespace Hogwarts
                     Console.WriteLine("Please enter your username");
                     string username=Console.ReadLine();
                     Console.ForegroundColor= ConsoleColor.DarkGray;
-                    Console.WriteLine("Please enter your password");
+                    Console.WriteLine("Please enter your Lastname");
                     string password = Console.ReadLine();
                     Console.ResetColor();
                     bool found=false;
@@ -92,9 +92,19 @@ namespace Hogwarts
                             int studentChoice=Menu.StudentMenu();
                             if (studentChoice == 1)//send letter to dumbledore 
                             {
-                                Student.SendLetterToDumbledore(Username:username,password:password);
+                                Student.SendLetterToDumbledore(Firstname:person.FirstName,Lastname:person.LastName);
                             }
-                            else if (studentChoice == 2)
+                            else if (studentChoice == 2)//take data
+                            {
+                                Console.ForegroundColor=ConsoleColor.DarkCyan;
+                                Console.WriteLine($"Your informations are:\n" +
+                                    $"Name:{person.FirstName + person.LastName}\n" +
+                                    $"Pet :{person.Pet}\n" +
+                                    $"Role: {person.Role}\n" +
+                                    $"Letters:  {person.ReceivedLetter}");
+                                Console.ResetColor();
+                            }
+                            else if (studentChoice == 3)//
                             {
 
                             }
@@ -103,7 +113,7 @@ namespace Hogwarts
                     if (!found)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Wrong username or password");
+                        Console.WriteLine("Wrong username or Lastname");
                         Console.ResetColor();
                         continue;
                     }

@@ -14,7 +14,7 @@ namespace Hogwarts
         public Group GroupName { get; set; }
         public bool HaveBaggage { get; set; }
         public Role Role { get; set; }
-        public string ReceivedLetter { get; set; }
+        public string ReceivedLetter = " ";
 
     }
 }

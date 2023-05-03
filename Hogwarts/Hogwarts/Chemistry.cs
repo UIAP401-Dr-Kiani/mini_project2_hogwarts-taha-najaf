@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hogwarts
 {
-    public  class Chemistry:Lessons
+    public class Chemistry:Lessons
     {
         public List<string> ListOfChemicals { get; set; }
     }

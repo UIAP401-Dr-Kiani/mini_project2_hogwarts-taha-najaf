@@ -13,6 +13,7 @@ namespace Hogwarts
         public int Capacity { get; set; }
         public int CurrentTerm { get; set; }
         public string Name { get; set; }
+        public string Homework { get; set; }
         public void DefineLesson()
         {
             Console.WriteLine("Please enter the name of the lesson: ");
@@ -29,6 +30,50 @@ namespace Hogwarts
                 $"capacity: {Capacity}\n" +
                 $"in term {CurrentTerm} defined");
             Console.ResetColor();
+        }
+        public static void DefineHomework()
+        {
+            Console.WriteLine($"Please enter the lesson you want to set homework by number:\n" +
+                
+                $"1=>Chemistry      2=>Botanical      3=>Botanicl      4=>Occultism     5=>Exit");
+            int choice=int.Parse(Console.ReadLine());
+            //------------------------------------ instance 
+            Chemistry chemistry = new Chemistry();
+            Botanical botanical = new Botanical();
+            Occultism occultism = new Occultism();
+            //-----------------------------------
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Enter the homework for Chemistry:");
+                    chemistry.Homework = Console.ReadLine();
+                    Console.ForegroundColor= ConsoleColor.Yellow;
+                    Console.WriteLine("Homework for Chemistry set.");
+                    Console.ResetColor();
+                    break;
+                case 2:
+                    Console.WriteLine("Enter the homework for Botanical:");
+                    botanical.Homework = Console.ReadLine();
+                    Console.ForegroundColor= ConsoleColor.Yellow;
+                    Console.WriteLine("Homework for Botanical set.");
+                    Console.ResetColor();
+                    break;
+                case 4:
+                    Console.WriteLine("Enter the homework for Occultism:");
+                    occultism.Homework = Console.ReadLine();
+                    Console.ForegroundColor= ConsoleColor.Yellow;
+                    Console.WriteLine("Homework for Occultism set.");
+                    Console.ResetColor();
+                    break;
+                case 5:
+                    Console.WriteLine("Exiting...");
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    Console.ResetColor();
+                    break;
+            }
         }
     }
 }

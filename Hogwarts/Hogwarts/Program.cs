@@ -96,7 +96,7 @@ namespace Hogwarts
                             }
                             else if (TeacherChoice == 2)//define homework
                             {
-
+                                Lessons.DefineHomework();
                             }
                             else if (TeacherChoice == 3)//set score
                             {

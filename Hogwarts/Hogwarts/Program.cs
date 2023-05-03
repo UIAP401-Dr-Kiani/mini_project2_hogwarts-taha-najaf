@@ -73,6 +73,54 @@ namespace Hogwarts
                         continue;
                     }
                 }
+                else if (Entrychoice==2)//teacher 
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Please enter your username");
+                    string username = Console.ReadLine();
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Please enter your Lastname");
+                    string password = Console.ReadLine();
+                    Console.ResetColor();
+                    bool found = false;
+                    foreach (var person in ListOfAllowedPersons)
+                    {
+                        if (person.Role==Role.teacher && person.Username == username &&person.Password==password)
+                        {
+                            found = true;
+                            int TeacherChoice=Menu.TeacherMenu();
+                            if (TeacherChoice == 1)//define lesson
+                            {
+
+                            }
+                            else if (TeacherChoice == 2)//define homework
+                            {
+
+                            }
+                            else if (TeacherChoice == 3)//set score
+                            {
+
+                            }
+                            else if (TeacherChoice == 4)//confirm grade
+                            {
+
+                            }
+                            else if (TeacherChoice == 5)//exit
+                                continue;
+                                
+
+                            
+                        }
+
+                    }
+                    if (found==false)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Wrong username or Lastname");
+                        Console.ResetColor();
+                        continue;
+                    }
+                }
                 
                 else if (Entrychoice == 3)//student 
                 {
@@ -92,11 +140,11 @@ namespace Hogwarts
                             int studentChoice=Menu.StudentMenu();
                             if (studentChoice == 1)//send letter to dumbledore 
                             {
-                                Student.SendLetterToDumbledore(Firstname:person.FirstName,Lastname:person.LastName);
+                                Student.SendLetterToDumbledore(Firstname: person.FirstName, Lastname: person.LastName);
                             }
                             else if (studentChoice == 2)//take data
                             {
-                                Console.ForegroundColor=ConsoleColor.DarkCyan;
+                                Console.ForegroundColor = ConsoleColor.DarkCyan;
                                 Console.WriteLine($"Your informations are:\n" +
                                     $"Name:{person.FirstName + person.LastName}\n" +
                                     $"Pet :{person.Pet}\n" +
@@ -104,10 +152,16 @@ namespace Hogwarts
                                     $"Letters:  {person.ReceivedLetter}");
                                 Console.ResetColor();
                             }
-                            else if (studentChoice == 3)//
+                            else if (studentChoice == 3)//choose unit
                             {
 
                             }
+                            else if (studentChoice == 4)//upload homework
+                            {
+
+                            }
+                            else if (studentChoice == 5)//exit
+                                continue;
                         }
                     }
                     if (!found)

@@ -91,7 +91,8 @@ namespace Hogwarts
                             int TeacherChoice=Menu.TeacherMenu();
                             if (TeacherChoice == 1)//define lesson
                             {
-
+                                Lessons Newlesson = new Lessons();
+                                Newlesson.DefineLesson();
                             }
                             else if (TeacherChoice == 2)//define homework
                             {

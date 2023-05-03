@@ -13,17 +13,21 @@ namespace Hogwarts
         public int Capacity { get; set; }
         public int CurrentTerm { get; set; }
         public string Name { get; set; }
-        public  void DefineLesson(string name, string time, int capacity, int currentTerm)
+        public void DefineLesson()
         {
-            Name = name;
-            Time = time;
-            Capacity = capacity;
-            CurrentTerm = currentTerm;
+            Console.WriteLine("Please enter the name of the lesson: ");
+            Name=Console.ReadLine();
+            Console.WriteLine("Please enter it's time: ");
+            Time=Console.ReadLine();
+            Console.WriteLine("Please enter it's capacity:  ");
+            Capacity=int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the term: ");
+            CurrentTerm=int.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"The lesson: {name}\n" +
-                $" with time:{time}\n" +
-                $"capacity: {capacity}\n" +
-                $"in term {currentTerm} defined");
+            Console.WriteLine($"The lesson: {Name}\n" +
+                $" with time:{Time}\n" +
+                $"capacity: {Capacity}\n" +
+                $"in term {CurrentTerm} defined");
             Console.ResetColor();
         }
     }

@@ -92,7 +92,7 @@ namespace Hogwarts
                             if (TeacherChoice == 1)//define lesson
                             {
                                 Lessons Newlesson = new Lessons();
-                                Newlesson.DefineLesson();
+                                Newlesson.DefineLesson(person.FirstName,person.LastName);
                             }
                             else if (TeacherChoice == 2)//define homework
                             {
@@ -155,7 +155,7 @@ namespace Hogwarts
                             }
                             else if (studentChoice == 3)//choose unit
                             {
-
+                                Student.SelectLesson();
                             }
                             else if (studentChoice == 4)//upload homework
                             {

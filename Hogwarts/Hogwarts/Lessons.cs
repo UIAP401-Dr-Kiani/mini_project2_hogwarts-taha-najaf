@@ -14,7 +14,7 @@ namespace Hogwarts
         public int CurrentTerm { get; set; }
         public string Name { get; set; }
         public string Homework { get; set; }
-        public void DefineLesson()
+        public void DefineLesson(string firstname,string lastname)
         {
             Console.WriteLine("Please enter the name of the lesson: ");
             Name=Console.ReadLine();
@@ -28,7 +28,8 @@ namespace Hogwarts
             Console.WriteLine($"The lesson: {Name}\n" +
                 $" with time:{Time}\n" +
                 $"capacity: {Capacity}\n" +
-                $"in term {CurrentTerm} defined");
+                $"in term {CurrentTerm} \n" +
+                $"was defined by {firstname} {lastname}");
             Console.ResetColor();
         }
         public static void DefineHomework()

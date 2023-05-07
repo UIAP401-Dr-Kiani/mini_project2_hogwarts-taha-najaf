@@ -8,6 +8,8 @@ namespace Hogwarts
 {
     public class Botanical : Lessons
     {
+        
+
         public List<string> ListOfFirstSemesterplants { get; set; }
         public List<string> ListOfSecondSemesterplants { get; set; }
         public List<string> ListOfThirdSemesterplants { get; set; }

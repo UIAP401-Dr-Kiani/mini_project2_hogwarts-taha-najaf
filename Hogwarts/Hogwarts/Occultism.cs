@@ -8,6 +8,8 @@ namespace Hogwarts
 {
     public class Occultism : Lessons
     {
+      
+
         public List<string> words { get; set; } 
     }
 }

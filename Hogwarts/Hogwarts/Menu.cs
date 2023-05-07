@@ -44,7 +44,7 @@ namespace Hogwarts
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Please enter your choice by numbers:     ");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("1=>Define lessons\t2=>Define homework\t3=>Set score for students\t4=>Confirm students grades\t5=>Exit  ");
+            Console.WriteLine("1=>Define ListOfLessons\t2=>Define homework\t3=>Set score for students\t4=>Confirm students grades\t5=>Exit  ");
             int choice = int.Parse(Console.ReadLine());
             Console.ResetColor();
             return choice;

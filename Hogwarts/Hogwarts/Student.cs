@@ -22,25 +22,25 @@ namespace Hogwarts
         }
         public static void SelectLesson()
         {
-            List<Lessons> lessons=new List<Lessons>();
+           // Lessons lessons=new Lessons();
             Console.WriteLine("Please enter the time:   ");
             string time=Console.ReadLine();
-            // Display the available lessons for the given time
-            Console.WriteLine($"Available lessons at {time}:");
-            foreach (var lesson in lessons)
+            // Display the available ListOfLessons for the given time
+            Console.WriteLine($"Available ListOfLessons at {time}:");
+            foreach (var lesson in Lessons.ListOfLessons)
             {
-                if (lesson.Time == time)
-                {
-                    Console.WriteLine($"- {lesson.Name}");
-                }
+                //if (lesson.Time == time)
+                //{
+                    Console.WriteLine($" {lesson.Name}");
+                //}
             }
 
             // Prompt the student to select a lesson
             Console.Write("Select a lesson: ");
             string selectedLesson = Console.ReadLine();
 
-            // Check if the selected lesson conflicts with any other selected lessons
-            foreach (var lesson in lessons)
+            // Check if the selected lesson conflicts with any other selected ListOfLessons
+            foreach (var lesson in Lessons.ListOfLessons)
             {
                 if (lesson.Name == selectedLesson && lesson.Time == time)
                 {

@@ -129,7 +129,7 @@ namespace Hogwarts
                     Console.WriteLine("Please enter your username");
                     string username=Console.ReadLine();
                     Console.ForegroundColor= ConsoleColor.DarkGray;
-                    Console.WriteLine("Please enter your Lastname");
+                    Console.WriteLine("Please enter your password");
                     string password = Console.ReadLine();
                     Console.ResetColor();
                     bool found=false;

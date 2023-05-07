@@ -8,6 +8,8 @@ namespace Hogwarts
 {
     public class Sport:Lessons
     {
+        
+
         public string sportType { get; set;}
     }
 }
